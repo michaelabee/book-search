@@ -1,0 +1,8 @@
+#results-container{
+    border: black solid 1px;
+    min-width: 400px;
+    min-height: 400px;
+    padding:5;
+    margin-top: 15px;
+    background: rgb(217, 218, 217);
+}

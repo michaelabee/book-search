@@ -1,0 +1,7 @@
+.card{
+    border:solid black 1px;
+    background-color: purple ;
+    min-width:350px;
+    min-height: 175px;
+    z-index: inherit 400;
+}
