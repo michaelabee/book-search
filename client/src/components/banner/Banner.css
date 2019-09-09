@@ -1,0 +1,13 @@
+#title {
+    font-size: 55px;
+    font-weight:bold;
+};
+#description {
+    font-size: 40px;
+}
+
+#jumbo {
+    background-color:#B8DBD9;
+    text-align:center;
+    border:solid 1px black;
+}

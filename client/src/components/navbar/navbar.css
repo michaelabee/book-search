@@ -1,0 +1,22 @@
+.navbar {
+    background-color:#254D32;
+}
+
+#title {
+    font-size: 30px;
+    color:white;
+}
+.item{
+    font-size:25px;
+    color:grey
+}
+.navbar li {
+    display: inline-block;
+    padding: 20px 0;
+    margin:5px;
+    text-align: left;
+   
+};
+
+
+
