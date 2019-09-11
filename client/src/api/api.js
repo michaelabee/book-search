@@ -1,7 +1,7 @@
 const axios = require("axios");
 
-var API_KEY = AIzaSyAdCuZIysFDvikGCFn_KRWSGuqmTfvIOu4;
-var query = "";
+var API_KEY = "AIzaSyAdCuZIysFDvikGCFn_KRWSGuqmTfvIOu4";
+var query = "holes";
 
 export default {
     searchBooks: function() {

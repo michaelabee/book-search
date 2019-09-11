@@ -1,20 +1,27 @@
 import React, { Component } from "react";
-import API from "../api/api";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
+
 import Navbar from "./components/navbar/navbar";
 import Banner from "./components/banner/Banner";
-import Search from "./components/search/search";
+
 import Results from "./components/resultsContainer/results";
 import Saved from "./components/savedContainer/saved"
-import Card from "./components/card/card"
+
 import "./App.css";
 
 class App extends Component {
+
   render() {
     return (
-      <div>
-      <Navbar/>
-      <Banner/>
-      </div>
+        <Router>
+            <Navbar />
+            <Banner/>
+            <Switch>
+              <Route exact path="/" component={Saved} />
+              <Route exact path="/search" component={Results} />
+              {/* <Route component={NoMatch} /> */}
+            </Switch>
+        </Router>
     );
   }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import "./navbar.css";
 
 function Navbar (){
@@ -8,11 +9,11 @@ function Navbar (){
         <li id="title">
           <p>Google Book Search</p>
         </li>
-        <li class="item">
-          <a>Search</a>
+        <li className="item">
+          <Link to={"/search"}>Search</Link>
         </li>
         <li>
-          <a class="item">Saved Books</a>
+        <Link to={"/"}>Saved Books</Link>
         </li>
       </ul>
     </nav>
