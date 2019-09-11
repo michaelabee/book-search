@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import API from "../api/api";
 import Navbar from "./components/navbar/navbar";
 import Banner from "./components/banner/Banner";
 import Search from "./components/search/search";
