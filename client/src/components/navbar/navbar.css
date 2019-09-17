@@ -1,14 +1,15 @@
 .navbar {
-    background-color:#254D32;
+    background-color:#96939B;
 }
 
 #title {
-    font-size: 30px;
+    font-size: 55px;
     color:white;
+    font-family: 'Playfair Display', serif;
 }
 .item{
     font-size:25px;
-    color:grey
+    color:black;
 }
 .navbar li {
     display: inline-block;

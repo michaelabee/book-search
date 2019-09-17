@@ -1,16 +1,15 @@
 import React from "react";
 import "./card.css";
 
-function Card() {
+function Card(props) {
   return (
     <div className="card">
       <div>
-        <h1>Book Title</h1>
-        <h3>Author</h3>
-        <p>Tagline</p>
-        <p>Book Description</p>
-        <button>View</button>
-        <button>Delete (x)</button>
+        <h1>{props.name}</h1>
+        <h3>{props.author}</h3>
+        <img href={props.image} alt={props.name}></img>
+        <p>{props.description}</p>
+        <deleteButton/>
       </div>
     </div>
   );

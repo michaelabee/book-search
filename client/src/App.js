@@ -17,7 +17,7 @@ class App extends Component {
             <Navbar />
             <Banner/>
             <Switch>
-              <Route exact path="/" component={Saved} />
+              <Route exact path="/books" component={Saved} />
               <Route exact path="/search" component={Results} />
               {/* <Route component={NoMatch} /> */}
             </Switch>
