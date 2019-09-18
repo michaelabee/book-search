@@ -1,4 +1,4 @@
-import React, { component } from "react";
+import React from "react";
 import Card from "../card/card";
 import API from "../../utils/API";
 import "./saved.css";
@@ -23,9 +23,9 @@ class Saved extends React.Component{
     return (
       <div id="saved-container">
         <h1>Saved Books</h1>
-        <Card>
+        {/* <Card>
                     
-        </Card>
+        </Card> */}
       </div>
     );
   }

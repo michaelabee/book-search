@@ -24,6 +24,6 @@ app.get("*", function(req, res) {
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/book-search");
 
-app.listen(PORT, function() {
+app.listen(process.env.PORT || 8080, function()  {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });

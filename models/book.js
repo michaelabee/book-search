@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds261486.mlab.com:61486/heroku_b2h240qr');
 const Schema = mongoose.Schema;
 
 const bookSchema = new Schema({

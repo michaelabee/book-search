@@ -1,42 +1,63 @@
 import React, {Component} from "react";
 import Search from "../search/search";
-// import Card from "../card/card";
+import Card from "../card/card";
 import API from "../../api/api";
 import "./results.css";
 
 class Results extends Component {
 
   state ={
-    books:{}
-  }
-  
-  searchBooks(arg){
-    console.log("searchBooks hit", arg);
-    API.searchBooks(arg).then(function(results){
-      console.log(results.data.items[0].volumeInfo.authors);
-      console.log(results.data.items[0].volumeInfo.description);
-      console.log(results.data.items[0].volumeInfo.imageLinks.smallThumbnail);
-      this.setState({ books: results})
-    })
-    // .then((results) => {
-    //   this.setState({ books: results })
-    // });
-    // console.log(books);
+    books:[]
   }
 
+  searchBooks = (arg) => {
+    console.log("searchBooks hit", arg);
+    API.searchBooks(arg)
+    .then (results => {
+      console.log(results.data.items, "results.data");
+      this.setState({ books: results.data.items });
+    })
+    .catch (error => 
+      console.log(error)
+    )
+  };
+
+  displayBooks = () => {
+    console.log(this.state.books, "BOOK DATA STATE");
+    if(this.state.books === undefined){
+      return null;
+    }
+    return this.state.books.map(book => (
+      <Card>
+      key={book.volumeInfo.id}
+      name={book.volumeInfo.title}
+      author={book.volumeInfo.author}
+      description={book.volumeInfo.description}
+      image={book.volumeInfo.imageLinks.thumbnail}
+      </Card>
+    ))
+  }
   render(){
+    console.log(this.state.books[0]);
+    const books = this.state.books.map(book => {
+      
+      return(
+      <Card
+      key={book.id}
+      name={book.volumeInfo.title}
+      author={book.volumeInfo.author}
+      description={book.volumeInfo.description}
+      image={book.volumeInfo.imageLinks.thumbnail}
+      />
+    )});
   return (
+    
     <div id="results-container">
       <Search searchBooks={this.searchBooks}/>
       <h1>Search Results</h1>
-      {/* {this.state.books.map(pic => (
-          // <Card
-          //   name={this.state.books.name}
-          //   image={this.state.books.image}
-          //   description={this.state.books.description}
-          //   author={this.state.books.author}
-          // />
-        ))} */}
+      
+      {books}
+      {/* {this.displayBooks()} */}
     </div>
   );
   }
