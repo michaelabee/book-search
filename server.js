@@ -22,9 +22,9 @@ app.get("*", function(req, res) {
 });
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/book-search");
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/book-search");
 
-mongoose.connect('mongodb://<michaelabee>:<password1>@ds261486.mlab.com:61486/heroku_b2h240qr');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://michaelabee:password1@ds261486.mlab.com:61486/heroku_b2h240qr');
 
 app.listen(process.env.PORT || 8080, function()  {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
