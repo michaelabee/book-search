@@ -1,5 +1,4 @@
 import React from "react";
-import DeleteButton from "../Button/Button"
 import "./card.css";
 
 function Card(props) {
