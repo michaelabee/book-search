@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import Search from "../search/search";
 import Card from "../card/card";
-import Button from "../Button/Button";
 import API from "../../api/api";
 import "./results.css";
 
