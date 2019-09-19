@@ -1,5 +1,5 @@
 import React from "react";
-import DeleteButton from "../deleteButton/DeleteButton"
+import DeleteButton from "../Button/Button"
 import "./card.css";
 
 function Card(props) {
@@ -11,7 +11,7 @@ function Card(props) {
         <h3>{props.author}</h3>
         <img src={props.image} alt={props.name}></img>
         <p>{props.description}</p>
-        <DeleteButton/>
+        <button>{props.button}</button>
       </div>
     </div>
   );
