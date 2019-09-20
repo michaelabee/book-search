@@ -13,7 +13,7 @@ function Navbar (){
           <Link to={"/search"}>Search</Link>
         </li>
         <li>
-        <Link to={"/books"}>Saved Books</Link>
+        <Link to={"/savedbooks"}>Saved Books</Link>
         </li>
       </ul>
     </nav>

@@ -56,15 +56,8 @@ class Results extends Component {
       author={book.volumeInfo.author}
       description={book.volumeInfo.description}
       image={book.volumeInfo.imageLinks.thumbnail}
-      button={() => (
-        <button
-          onClick={() => this.handleBookSave(book.id)}
-          className="btn btn-primary ml-2"
-        >
-          Save
-        </button>
-      )}
-      />
+      searchBooks={this.searchBooks}
+      ></Card>
     )});
   return (
     

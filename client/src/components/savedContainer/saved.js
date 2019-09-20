@@ -14,7 +14,7 @@ class Saved extends React.Component {
   }
 
   loadBooks = () => {
-    API.getBooks()
+    API.getSavedBooks()
       .then(res => this.setState({ books: res.data }))
       .catch(err => console.log(err));
   };

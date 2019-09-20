@@ -1,7 +1,14 @@
-.card{
+.cardStyle{
     border:solid black 1px;
     background-color: lavender;
     min-width:350px;
     min-height: 175px;
     z-index: inherit 400;
+}
+.buttons{
+    min-width: 40px;
+    min-height:30px;
+    color:black;
+    font-weight: bolder;
+    text-align:right;
 }

@@ -24,8 +24,12 @@ app.get("*", function(req, res) {
 // Connect to the Mongo DB
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/book-search");
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://michaelabee:password1@ds261486.mlab.com:61486/heroku_b2h240qr');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://michaelabee:password1@ds129459.mlab.com:29459/heroku_q83517lq',
+{
+  useCreateIndex: true,
+  useNewUrlParser: true
+});
 
-app.listen(process.env.PORT || 8080, function()  {
+app.listen(process.env.PORT || 3001, function()  {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
